@@ -1,6 +1,15 @@
 .payments-container {
   flex: 0 0 100%;
-  height: 322px;
+/*  height: 322px;*/
+  max-width: 100vw;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  
+  -ms-overflow-style: none;  // IE 10+
+  overflow: -moz-scrollbars-none;  // Firefox
+  &::-webkit-scrollbar {
+    display: none;  // Safari and Chrome
+  }
 
   table {
     width: 940px;

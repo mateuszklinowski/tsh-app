@@ -21,7 +21,7 @@ export const Payment = ({payment}) => {
                {payment.payment_ref}
            </td>
            <td>
-               <Currency quantity={payment.payment_amount} currency={'GBP'}/>
+               <Currency quantity={Number(payment.payment_amount)} currency={'GBP'}/>
            </td>
        </tr>
     )

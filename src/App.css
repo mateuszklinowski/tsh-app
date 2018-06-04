@@ -2,7 +2,12 @@
 .filters-container {
   flex: 0 0 auto;
   margin-top: 22px;
-  margin-bottom: 18px; }
+  margin-bottom: 18px;
+  max-width: 100vw; }
+  .filters-container .filters-form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 25px; }
   .filters-container .form-control {
     margin: auto 5px;
     font-size: 12px;
@@ -14,6 +19,13 @@
       border: 1px solid #d6d6d6;
       box-sizing: border-box;
       padding-left: 10px; }
+    @media screen and (max-width: 750px) {
+      .filters-container .form-control {
+        flex: 1 0 auto;
+        margin-top: 5px;
+        margin-bottom: 5px; }
+        .filters-container .form-control#query {
+          flex: 1 0 100%; } }
   .filters-container .form-btn {
     width: 74px;
     border: transparent; }
@@ -31,7 +43,14 @@
 
 .payments-container {
   flex: 0 0 100%;
-  height: 322px; }
+  /*  height: 322px;*/
+  max-width: 100vw;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none; }
+  .payments-container::-webkit-scrollbar {
+    display: none; }
   .payments-container table {
     width: 940px;
     border-spacing: 0;
@@ -128,6 +147,8 @@ body {
 
 .App {
   width: 980px;
+  max-width: 100vw;
+  overflow: hidden;
   border-radius: 4px;
   background-color: #fdfdfd;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
