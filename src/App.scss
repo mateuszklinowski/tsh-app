@@ -1,0 +1,76 @@
+@import "./styles/fonts.scss";
+@import "./styles/filters.scss";
+@import "./styles/payments.scss";
+
+body{
+  background-image: url("./assets/background.png");
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 77px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.App {
+  width: 980px;
+  border-radius: 4px;
+  background-color: rgb(253, 253, 253);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  &:after{
+    content:"";
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 994px;
+    height: calc(100% + 16px);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.051);
+    z-index: -1;
+  }
+  }
+
+.App-header {
+  flex:1 1 auto;
+  .title{
+    margin: 27px 0 0 0;
+    font-size: 60px;
+    color: rgb(34, 136, 183);
+    font-weight: 300;
+    text-align: center;
+  }
+  .subtitle{
+    font-size: 17px;
+    color: rgb(59, 59, 59);
+    text-align: center;
+    margin-top: 11px;
+  }
+  hr{
+    margin: 20px 17px 0;
+  }
+  .hr {
+    position: absolute;
+    left: 180px;
+    top: 215px;
+    width: 940px;
+    height: 1px;
+    z-index: 215;
+  }
+
+}
+
+.App-main{
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
