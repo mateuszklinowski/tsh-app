@@ -1,6 +1,9 @@
 @import "./styles/fonts.scss";
-@import "./styles/filters.scss";
 @import "./styles/payments.scss";
+@import "./styles/pagination.scss";
+@import "./styles/filters.scss";
+@import "./styles/modal.scss";
+@import "./styles/ratingIcons.scss";
 
 body{
   background-image: url("./assets/background.png");
@@ -75,4 +78,8 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+button{
+  cursor: pointer;
 }

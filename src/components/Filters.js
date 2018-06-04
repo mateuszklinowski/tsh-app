@@ -33,7 +33,8 @@ export const Filters = ({filters, resetFilters, getPayments, updateFilters}) => 
             <form className="filters-form" onSubmit={featchPayments}>
                     <input className="form-control" type="text" placeholder="Search suppliers" id="query" name="query"
                            ref={node => queryInput = node}/>
-                    <select className="form-control" id="rating" name="rating" ref={node => ratingInput = node} defaultValue={0}>
+                <span className="select-wrapper">
+                    <select className="form-control select" id="rating" name="rating" ref={node => ratingInput = node} defaultValue={0}>
                         <option value={0}>Select pound rating</option>
                         <option value={1}>1</option>
                         <option value={2}>2</option>
@@ -41,6 +42,7 @@ export const Filters = ({filters, resetFilters, getPayments, updateFilters}) => 
                         <option value={4}>4</option>
                         <option value={5}>5</option>
                     </select>
+                </span>
                     <button className="form-control form-btn btn-grey" onClick={reset}>Reset</button>
                     <button className="form-control form-btn btn-blue" type="submit">Search</button>
             </form>

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import * as actionCreators from '../actions';
 import PropTypes from 'prop-types';
 
-export const Payments = ({payments}) => {
+export const Payments = ({payments, showModal}) => {
     return (
         <div className="payments-container">
             <table>
@@ -18,7 +18,7 @@ export const Payments = ({payments}) => {
                 </thead>
                 <tbody>
                 {payments.map(payment=>
-                    <Payment payment={payment} key={payment.payment_ref}/>
+                    <Payment payment={payment} showModal={showModal} key={payment.payment_ref}/>
                 )}
                 </tbody>
             </table>

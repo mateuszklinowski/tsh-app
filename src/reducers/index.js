@@ -22,6 +22,15 @@ const initialState = fromJS({
     app: {
         loading: false,
         requestError: false,
+    },
+    modal:{
+        show:false,
+        payment:{
+            payment_supplier:"",
+            payment_ref:"",
+            payment_cost_rating:"",
+            payment_amount:""
+        }
     }
 });
 
@@ -62,6 +71,22 @@ export default (state = initialState, action) => {
         case 'UPDATE_FILTERS':
             return state.mergeDeep(fromJS({
                 filters: action.payload
+            }));
+        case 'HIDE_MODAL':
+            return state.mergeDeep(fromJS({
+                modal:{
+                    show:false
+                }
+            }));
+
+        case 'SHOW_MODAL':
+            return state.mergeDeep(fromJS({
+                modal:{
+                    show:true,
+                    payment:{
+                        ...action.payload.payment
+                    }
+                }
             }));
         default :
             return state

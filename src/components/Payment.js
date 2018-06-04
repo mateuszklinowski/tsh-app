@@ -2,9 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Currency from 'react-currency-formatter';
 
-export const Payment = ({payment}) => {
+export const Payment = ({payment, showModal}) => {
+
+    const openModal = () =>{
+        showModal(payment);
+    };
+
     return (
-       <tr>
+       <tr onClick={()=> openModal()}>
            <td>
                {payment.payment_supplier}
            </td>

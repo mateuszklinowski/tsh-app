@@ -37,6 +37,7 @@
       border-right: 1px solid #d2d5d7;
       border-radius: 0 4px 0 0; }
   .payments-container tbody td {
+    cursor: pointer;
     font-family: Helvetica, serif;
     height: 50px;
     text-align: center;
@@ -50,33 +51,12 @@
     .payments-container tbody td:nth-child(4) {
       width: 10%;
       border-right: 1px solid #d2d5d7; }
+  .payments-container tbody tr:nth-of-type(even) {
+    background: #eaeced; }
   .payments-container tbody tr:last-child td:first-child {
     border-radius: 0 0 0 4px; }
   .payments-container tbody tr:last-child td:last-child {
     border-radius: 0 0 4px 0; }
-  .payments-container .icons-container {
-    display: flex;
-    justify-content: center; }
-  .payments-container .rating-icon {
-    display: inline-block;
-    font-size: 15px;
-    line-height: 26px;
-    text-align: center;
-    border-radius: 50%;
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
-    width: 26px;
-    height: 26px;
-    border: 1px solid #666666;
-    margin: 0 2px;
-    background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
-    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
-    background-image: -ms-linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
-    color: #666666; }
-    .payments-container .rating-icon.blue {
-      background-image: -moz-linear-gradient(90deg, #3366cc 0%, #62bfea 100%);
-      background-image: -webkit-linear-gradient(90deg, #3366cc 0%, #62bfea 100%);
-      background-image: -ms-linear-gradient(90deg, #3366cc 0%, #62bfea 100%);
-      color: #fdfdfd; }
 
 .btn {
   border-radius: 50%;

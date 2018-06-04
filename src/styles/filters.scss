@@ -17,6 +17,7 @@
     border-radius: 4px;
     float: left;
     height: 30px;
+    display: inline-block;
 
     &[type="text"]{
       width: 370px;
@@ -34,8 +35,31 @@
         flex:1 0 100%;
       }
     }
-
   }
+
+  .select-wrapper{
+    position: relative;
+    &:after{
+      content:"";
+      display: block;
+      position: absolute;
+      top:0;
+      left: 0;
+      height: 30px;
+      width: 100%;
+      background-color: #eaeced;
+      z-index: 1;
+      border-radius: 4px;
+    }
+  }
+  .select{
+    height: 18px;
+    margin-top:6px;
+    margin-bottom: 6px;
+    z-index: 2;
+    position: relative;
+  }
+
   .form-btn{
     width: 74px;
     border: transparent;
@@ -55,4 +79,5 @@
     }
   }
 }
+
 

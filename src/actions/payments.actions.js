@@ -36,11 +36,9 @@ export function getPayments(){
         return fetch(url)
             .then(response => response.json())
             .then(json => {
-                console.log(json);
                 return dispatch(requestPaymentsSuccess(json))
             })
             .catch(err=>{
-                console.log(err);
                 return dispatch(requestPaymentsFail(err))
             })
     }

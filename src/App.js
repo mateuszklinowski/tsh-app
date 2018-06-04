@@ -3,6 +3,7 @@ import './App.css';
 import {PaymentsContainer} from "./components/Payments";
 import {FiltersContainer} from "./components/Filters";
 import {PaginationContainer} from "./components/Pagination";
+import {PaymentModalContainer} from "./components/PaymentModal";
 
 class App extends Component {
     render() {
@@ -19,6 +20,7 @@ class App extends Component {
                     <FiltersContainer/>
                     <PaymentsContainer/>
                     <PaginationContainer/>
+                    <PaymentModalContainer/>
                 </main>
             </div>
         );
