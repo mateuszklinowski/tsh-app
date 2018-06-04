@@ -1,0 +1,1 @@
+export const apiUrl = "http://test-api.kuria.tshdev.io/";
